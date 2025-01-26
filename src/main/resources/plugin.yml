@@ -1,0 +1,7 @@
+name: EffectKill
+main: fr.souyard.effectkill.Main
+author: Souyard
+version: 1.9.6
+commands:
+  effectkill:
+    aliases: [ek, effect]

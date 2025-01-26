@@ -1,0 +1,176 @@
+EffectKill:
+  Gui:
+    NAME: '&eEffect-Kill'
+    WAVE:
+      ENABLE: true
+      NAME: '&f&lWave'
+      LORE:
+        - ' '
+        - '&7Wave particle:'
+        - '  &7- A wave appears on your victim'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 326
+      SLOTS: 11
+    STAR:
+      ENABLE: true
+      NAME: '&f&lStar'
+      LORE:
+        - ' '
+        - '&7Star firework:'
+        - '  &7- A star explodes on the victim'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 399
+      SLOTS: 12
+    EXPLODE:
+      ENABLE: true
+      NAME: '&f&lExplosion'
+      LORE:
+        - ' '
+        - '&7Ball particle:'
+        - '  &7- Reveal a thunderstorm on the victim'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 46
+      SLOTS: 13
+    FROST:
+      ENABLE: true
+      NAME: '&f&lFrost'
+      LORE:
+        - ' '
+        - '&7Frost particle:'
+        - '  &7- Frost fired around your victim'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 377
+      SLOTS: 16
+    SATAN:
+      ENABLE: true
+      NAME: '&f&lSatan'
+      LORE:
+        - ' '
+        - '&7Satan particle:'
+        - '  &7- A shower of ash appears'
+        - '  &7- on your victim and explodes the head'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 331
+      SLOTS: 15
+    SPHERE:
+      ENABLE: true
+      NAME: '&f&lSphere'
+      LORE:
+        - ' '
+        - '&7Sphere particle:'
+        - '  &7- A ball explodes on your victim'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 341
+      SLOTS: 17
+    CLOUD:
+      ENABLE: true
+      NAME: '&f&lCloud'
+      LORE:
+        - ' '
+        - '&7Cloud particle:'
+        - '  &7- A rain of ash appears'
+        - '  &7- on your victim and explodes the head'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 351
+      SLOTS: 14
+    FLAMERING:
+      ENABLE: true
+      NAME: '&f&lFlamering'
+      LORE:
+        - ' '
+        - '&7Flamering particle:'
+        - '  &7- A sphere of flame surrounds your'
+        - '  &7- victim and explodes'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 327
+      SLOTS: 24
+    RAINWEALTH:
+      ENABLE: true
+      NAME: '&f&lRainwealth'
+      LORE:
+        - ' '
+        - '&7RainWealth particle:'
+        - '  &7- A shower of wealth fall'
+        - '  &7- on your victim'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 266
+      SLOTS: 22
+    FIREWORK:
+      ENABLE: true
+      NAME: '&f&lFirework'
+      LORE:
+        - ' '
+        - '&7Firework particle:'
+        - '  &7- Particles on fire of'
+        - '  &7- artifice appears on the victim'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 385
+      SLOTS: 23
+    SOUP:
+      ENABLE: true
+      NAME: '&f&lSoup'
+      LORE:
+        - ' '
+        - '&7Soup effect:'
+        - '  &7- drop soup effect'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 436
+      SLOTS: 25
+    HEART:
+      ENABLE: true
+      NAME: '&f&lHeart'
+      LORE:
+        - ' '
+        - '&7Heart effect:'
+        - '&7Your target is'
+        - '&7full of love!'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 38
+      SLOTS: 21
+    REMOVE:
+      NAME: '&cRemove'
+      LORE:
+        - ' '
+        - '&7remove all effect'
+        - ' '
+        - '&rLeft click to put this effect'
+      ID: 166
+      SLOTS: 41
+  Messages:
+    noEffect: '&cYou do not possess this effect!'
+    noPerm: '&cYou do not possess this particle!'
+    Remove: '&cYou delete your effect.'
+    Display: '&aYou put the effect %effect%!'
+    WaveEffect: '&lWaveEffect&a.'
+    StarEffect: '&lStarEffect&a.'
+    ExplodeEffect: '&lExplodeEffect&a.'
+    FrostEffect: '&lFrostEffect&a.'
+    SatanEffect: '&lSatanEffect&a.'
+    SphereEffect: '&lSphereEffect&a.'
+    CloudEffect: '&lCloudEffect&a.'
+    FlameringEffect: '&lFlameringEffect&a.'
+    RainwealthEffect: '&lRainwealthEffect&a.'
+    FireworkEffect: '&lFireworkEffect&a.'
+    SoupEffect: '&lSoupEffect&a.'
+    HeartEffect: '&lHeartEffect&a.'
+Item:
+  Giveitem: true
+  Joinitem: 399
+  Placeitem: 5
+  Nameitem: '&eEffect-Kill'
+  Loreitem: []
+Default:
+  enable: false
+  type: 'WaveEffect'
