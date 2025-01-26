@@ -1,7 +1,7 @@
 name: EffectKill
 main: fr.souyard.effectkill.Main
 author: Souyard
-version: 2.0.0
+version: ${version}
 api-version: 1.16
 commands:
   effectkill:

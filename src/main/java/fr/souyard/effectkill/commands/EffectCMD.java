@@ -221,7 +221,7 @@ public class EffectCMD implements CommandExecutor {
                 }
                 player.sendMessage(plugin.gui("Messages.noPerm"));
             } else if (args[0].equalsIgnoreCase("remove")) {
-                Gui.remove(player);
+                Gui.remove(player, true);
             } else {
                 displayCommandHelp(player);
             }

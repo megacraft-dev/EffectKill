@@ -213,8 +213,6 @@ public class Gui implements Listener {
                     plugin.waveEffect.add(player);
                 } else if (!player.hasPermission("effectkill.wave")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.STAR.ID"))) {
                 remove(player);
@@ -223,8 +221,6 @@ public class Gui implements Listener {
                     plugin.starEffect.add(player);
                 } else if (!player.hasPermission("effectkill.starEffect")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.RAINWEALTH.ID"))) {
                 remove(player);
@@ -233,8 +229,6 @@ public class Gui implements Listener {
                     plugin.rainwealthEffect.add(player);
                 } else if (!player.hasPermission("effectkill.rainwealth")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.FLAMERING.ID"))) {
                 remove(player);
@@ -243,8 +237,6 @@ public class Gui implements Listener {
                     plugin.flameringEffect.add(player);
                 } else if (!player.hasPermission("effectkill.flamering")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.EXPLODE.ID"))) {
                 remove(player);
@@ -253,8 +245,6 @@ public class Gui implements Listener {
                     plugin.explodeEffect.add(player);
                 } else if (!player.hasPermission("effectkill.explode")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.FROST.ID"))) {
                 remove(player);
@@ -263,8 +253,6 @@ public class Gui implements Listener {
                     plugin.frostEffect.add(player);
                 } else if (!player.hasPermission("effectkill.frost")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.SATAN.ID"))) {
                 remove(player);
@@ -273,8 +261,6 @@ public class Gui implements Listener {
                     plugin.satanEffect.add(player);
                 } else if (!player.hasPermission("effectkill.satan")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.CLOUD.ID"))) {
                 remove(player);
@@ -283,8 +269,6 @@ public class Gui implements Listener {
                     plugin.cloudEffect.add(player);
                 } else if (!player.hasPermission("effectkill.cloud")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.SPHERE.ID"))) {
                 remove(player);
@@ -293,8 +277,6 @@ public class Gui implements Listener {
                     plugin.sphereEffect.add(player);
                 } else if (!player.hasPermission("effectkill.sphere")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.FIREWORK.ID"))) {
                 remove(player);
@@ -303,8 +285,6 @@ public class Gui implements Listener {
                     plugin.fireworkEffect.add(player);
                 } else if (!player.hasPermission("effectkill.firework")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.SOUP.ID"))) {
                 remove(player);
@@ -313,8 +293,6 @@ public class Gui implements Listener {
                     plugin.soupEffect.add(player);
                 } else if (!player.hasPermission("effectkill.soup")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.HEART.ID"))) {
                 remove(player);
@@ -323,16 +301,18 @@ public class Gui implements Listener {
                     plugin.heartEffect.add(player);
                 } else if (!player.hasPermission("effectkill.heart")) {
                     player.sendMessage(plugin.gui("Messages.noPerm"));
-                } else {
-                    remove(player);
                 }
             } else if (item.getType() == Material.matchMaterial(config.getString("EffectKill.Gui.REMOVE.ID"))) {
-                remove(player);
+                remove(player, true);
             }
         }
     }
 
     public static void remove(Player player) {
+        remove(player, false);
+    }
+
+    public static void remove(Player player, boolean print) {
         plugin.waveEffect.remove(player);
         plugin.starEffect.remove(player);
         plugin.sphereEffect.remove(player);
@@ -345,6 +325,8 @@ public class Gui implements Listener {
         plugin.cloudEffect.remove(player);
         plugin.soupEffect.remove(player);
         plugin.heartEffect.remove(player);
-        player.sendMessage(plugin.gui("Messages.Remove"));
+        if (print) {
+            player.sendMessage(plugin.gui("Messages.Remove"));
+        }
     }
 }

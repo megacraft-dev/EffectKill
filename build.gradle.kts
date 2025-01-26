@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.megacraft"
-version = "2.0.0"
+version = "2.0.1"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_16
@@ -25,10 +25,16 @@ dependencies {
     compileOnly("org.spigotmc:spigot:1.16.5-R0.1-SNAPSHOT")
 }
 
-tasks.jar {
-    archiveFileName = "EffectKill.jar"
+tasks.processResources {
+    filesMatching("**/*") {
+        expand(project.properties)
+    }
 }
 
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
+}
+
+tasks.jar {
+    archiveFileName = "EffectKill.jar"
 }
