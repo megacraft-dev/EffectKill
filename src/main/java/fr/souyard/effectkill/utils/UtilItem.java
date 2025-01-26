@@ -8,53 +8,42 @@ public class UtilItem {
 
     public static ColorData getGreatRandomColor() {
         byte b = 0;
-        Color color = null;
-        switch (UtilMath.randomRange(0, 8)) {
-            case 0: {
-                color = Color.WHITE;
-                break;
-            }
-            case 1: {
+        Color color = switch (UtilMath.randomRange(0, 8)) {
+            case 0 -> Color.WHITE;
+            case 1 -> {
                 b = 1;
-                color = Color.ORANGE;
-                break;
+                yield Color.ORANGE;
             }
-            case 2: {
+            case 2 -> {
                 b = 2;
-                color = Color.FUCHSIA;
-                break;
+                yield Color.FUCHSIA;
             }
-            case 3: {
+            case 3 -> {
                 b = 4;
-                color = Color.YELLOW;
-                break;
+                yield Color.YELLOW;
             }
-            case 4: {
+            case 4 -> {
                 b = 5;
-                color = Color.GREEN;
-                break;
+                yield Color.GREEN;
             }
-            case 5: {
+            case 5 -> {
                 b = 9;
-                color = Color.NAVY;
-                break;
+                yield Color.NAVY;
             }
-            case 6: {
+            case 6 -> {
                 b = 10;
-                color = Color.PURPLE;
-                break;
+                yield Color.PURPLE;
             }
-            case 7: {
+            case 7 -> {
                 b = 11;
-                color = Color.BLUE;
-                break;
+                yield Color.BLUE;
             }
-            case 8: {
+            case 8 -> {
                 b = 14;
-                color = Color.RED;
-                break;
+                yield Color.RED;
             }
-        }
+            default -> null;
+        };
         return new ColorData(b, color);
     }
 

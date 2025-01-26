@@ -21,7 +21,7 @@ public class RainwealthEffect {
 
     public static void death(Player player) {
         Location loc = player.getLocation();
-        ItemStack skull = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
+        ItemStack skull = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta skullMeta = (SkullMeta) skull.getItemMeta();
         skullMeta.setOwner(player.getName());
         skull.setItemMeta(skullMeta);
@@ -58,7 +58,7 @@ public class RainwealthEffect {
                             UtilMath.randomRange(0.8F, -0.8F)), 255, 185, 0).send();
                     UtilParticle.sendParticle(loc.clone().add(UtilMath.randomRange(-0.8F, 0.8F), 2.5D,
                                     UtilMath.randomRange(-0.8F, 0.8F)), Particle.ITEM_CRACK, 0, new Vector(0.0D, -1.5D, 0.0D),
-                            1.0F, new ItemStack(Material.GOLD_INGOT, 1));
+                            1.0F, new ItemStack(Material.GOLD_INGOT));
                 }
                 if (this.phi > 18.84955592153876D) {
                     RainwealthEffect.playThunder(loc.clone().add(UtilMath.randomRange(-0.5F, 0.5F), 2.7D,
@@ -72,7 +72,7 @@ public class RainwealthEffect {
 
     private static void playThunder(Location location) {
         UtilLocation.getClosestPlayersFromLocation(location, 4.0D).forEach(player ->
-                player.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_THUNDER, 0.05F, 0.0F));
+                player.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 0.05F, 0.0F));
         Location clone = location.clone();
         Vector vector = UtilMath.getRandomVector();
         vector.setY(-Math.abs(vector.getY() - 2.0D));

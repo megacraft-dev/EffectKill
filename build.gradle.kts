@@ -4,20 +4,25 @@ plugins {
 }
 
 group = "ru.megacraft"
-version = "1.0.0"
+version = "2.0.0"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_16
+    targetCompatibility = JavaVersion.VERSION_16
 }
 
 repositories {
     mavenCentral()
-    maven("https://repo.aikar.co/content/groups/aikar")
+    maven("https://repo.megacraft.org/repository/maven-private") {
+        credentials {
+            username = System.getenv("MEGACRAFT_REPO_USERNAME")
+            password = System.getenv("MEGACRAFT_REPO_PASSWORD")
+        }
+    }
 }
 
 dependencies {
-    compileOnly("org.spigotmc:spigot:1.12.2-R0.1-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot:1.16.5-R0.1-SNAPSHOT")
 }
 
 tasks.jar {

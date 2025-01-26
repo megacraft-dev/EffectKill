@@ -35,7 +35,7 @@ public class Main extends JavaPlugin {
     @Override
     public void onLoad() {
         Bukkit.getConsoleSender().sendMessage(" ");
-        Bukkit.getConsoleSender().sendMessage("§8[§6EffectKill§8] §7Plugin was §bloading..!");
+        Bukkit.getConsoleSender().sendMessage("§8[§6EffectKill§8] §7Plugin is §bloading...");
         Bukkit.getConsoleSender().sendMessage(" ");
     }
 
@@ -46,7 +46,7 @@ public class Main extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage("§7==========================");
         Bukkit.getConsoleSender().sendMessage("§8[§6EffectKill§8] §7Plugin was §aenabled!");
         Bukkit.getConsoleSender().sendMessage("§8[§6EffectKill§8] §7By: §6Souyard");
-        Bukkit.getConsoleSender().sendMessage("§8[§6EffectKill§8] §7Version: §61.9.6");
+        Bukkit.getConsoleSender().sendMessage("§8[§6EffectKill§8] §7Version: §62.0.0");
         Bukkit.getConsoleSender().sendMessage("§7==========================");
         getServer().getPluginManager().registerEvents(new EffectRun(), this);
         getServer().getPluginManager().registerEvents(new Gui(), this);

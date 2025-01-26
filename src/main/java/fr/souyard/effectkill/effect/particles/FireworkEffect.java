@@ -17,7 +17,7 @@ public class FireworkEffect {
 
     public static void death(Player player) {
         Location location = player.getLocation();
-        location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_LAUNCH, 0.1F, 1.0F);
+        location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 0.1F, 1.0F);
         location.add(UtilMath.getRandomWithExclusion(-2, 2, 0), 1.0D, UtilMath.getRandomWithExclusion(-2, 2, 0));
         new BukkitRunnable() {
             int k = 0;
@@ -30,7 +30,7 @@ public class FireworkEffect {
                     this.y += 0.1F;
                     UtilParticle.sendParticle(location, Particle.FIREWORKS_SPARK, 1, new Vector(0, 0, 0), 0.0F);
                 } else {
-                    location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_BLAST, 0.1F, 1.0F);
+                    location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_ROCKET_BLAST, 0.1F, 1.0F);
                     Color color = UtilItem.getGreatRandomColor().getColor();
                     double randomRange = UtilMath.randomRange(0.4D, 1.0D);
                     for (int i = 0; i < 50; i++) {
@@ -49,7 +49,7 @@ public class FireworkEffect {
 
     private static void playFirework1(Player player) {
         Location location = player.getLocation();
-        location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_LAUNCH, 0.1F, 1.0F);
+        location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 0.1F, 1.0F);
         location.add(UtilMath.getRandomWithExclusion(-2, 2, 0), 1.0D, UtilMath.getRandomWithExclusion(-2, 2, 0));
         new BukkitRunnable() {
             int k = 0;
@@ -62,7 +62,7 @@ public class FireworkEffect {
                     this.y += 0.1F;
                     UtilParticle.sendParticle(location, Particle.FIREWORKS_SPARK, 1, new Vector(0, 0, 0), 0.0F);
                 } else {
-                    location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_BLAST, 0.1F, 1.0F);
+                    location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_ROCKET_BLAST, 0.1F, 1.0F);
                     Color color = UtilItem.getGreatRandomColor().getColor();
                     double randomRange = UtilMath.randomRange(0.4D, 1.0D);
                     for (int i = 0; i < 50; i++) {
@@ -81,7 +81,7 @@ public class FireworkEffect {
 
     private static void playFirework2(Player player) {
         Location location = player.getLocation();
-        location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_LAUNCH, 0.1F, 1.0F);
+        location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 0.1F, 1.0F);
         location.add(UtilMath.getRandomWithExclusion(-2, 2, 0), 1.0D, UtilMath.getRandomWithExclusion(-2, 2, 0));
         new BukkitRunnable() {
             int k = 0;
@@ -94,7 +94,7 @@ public class FireworkEffect {
                     this.y += 0.1F;
                     UtilParticle.sendParticle(location, Particle.FIREWORKS_SPARK, 1, new Vector(0, 0, 0), 0.0F);
                 } else {
-                    location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_BLAST, 0.1F, 1.0F);
+                    location.getWorld().playSound(location, Sound.ENTITY_FIREWORK_ROCKET_BLAST, 0.1F, 1.0F);
                     Color color = UtilItem.getGreatRandomColor().getColor();
                     double randomRange = UtilMath.randomRange(0.4D, 1.0D);
                     for (int i = 0; i < 50; i++) {

@@ -23,10 +23,11 @@ public class SatanEffect extends Main {
 
     public static void death(Player player) {
         Location loc = player.getLocation();
-        ItemStack skull = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
+        ItemStack skull = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta skullMeta = (SkullMeta) skull.getItemMeta();
         skullMeta.setOwner(player.getName());
         skull.setItemMeta(skullMeta);
+
         armor = (ArmorStand) loc.getWorld().spawnEntity(loc, EntityType.ARMOR_STAND);
         armor.setVisible(false);
         armor.setCustomName("§c§l" + player.getName());
@@ -34,6 +35,7 @@ public class SatanEffect extends Main {
         armor.setHelmet(skull);
         armor.setGravity(false);
         armor.setVelocity(armor.getVelocity().multiply(new Vector(0, 4, 0)));
+
         new BukkitRunnable() {
             double phi = 0.0D;
 
@@ -66,7 +68,7 @@ public class SatanEffect extends Main {
 
     private static void playThunder(Location location) {
         UtilLocation.getClosestPlayersFromLocation(location, 4.0D).forEach(player ->
-                player.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_THUNDER, 0.05F, 0.0F));
+                player.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 0.05F, 0.0F));
         Location clone = location.clone();
         Vector vector = UtilMath.getRandomVector();
         vector.setY(-Math.abs(vector.getY() - 2.0D));

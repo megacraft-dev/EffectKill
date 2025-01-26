@@ -10,7 +10,7 @@ EffectKill:
         - '  &7- A wave appears on your victim'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 326
+      ID: WATER_BUCKET
       SLOTS: 11
     STAR:
       ENABLE: true
@@ -21,7 +21,7 @@ EffectKill:
         - '  &7- A star explodes on the victim'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 399
+      ID: NETHER_STAR
       SLOTS: 12
     EXPLODE:
       ENABLE: true
@@ -32,7 +32,7 @@ EffectKill:
         - '  &7- Reveal a thunderstorm on the victim'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 46
+      ID: TNT
       SLOTS: 13
     FROST:
       ENABLE: true
@@ -43,7 +43,7 @@ EffectKill:
         - '  &7- Frost fired around your victim'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 377
+      ID: BLAZE_POWDER
       SLOTS: 16
     SATAN:
       ENABLE: true
@@ -55,7 +55,7 @@ EffectKill:
         - '  &7- on your victim and explodes the head'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 331
+      ID: REDSTONE
       SLOTS: 15
     SPHERE:
       ENABLE: true
@@ -66,7 +66,7 @@ EffectKill:
         - '  &7- A ball explodes on your victim'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 341
+      ID: SLIME_BALL
       SLOTS: 17
     CLOUD:
       ENABLE: true
@@ -78,7 +78,7 @@ EffectKill:
         - '  &7- on your victim and explodes the head'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 351
+      ID: LAPIS_ORE
       SLOTS: 14
     FLAMERING:
       ENABLE: true
@@ -90,7 +90,7 @@ EffectKill:
         - '  &7- victim and explodes'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 327
+      ID: LAVA_BUCKET
       SLOTS: 24
     RAINWEALTH:
       ENABLE: true
@@ -102,7 +102,7 @@ EffectKill:
         - '  &7- on your victim'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 266
+      ID: GOLD_INGOT
       SLOTS: 22
     FIREWORK:
       ENABLE: true
@@ -114,7 +114,7 @@ EffectKill:
         - '  &7- artifice appears on the victim'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 385
+      ID: FIRE_CHARGE
       SLOTS: 23
     SOUP:
       ENABLE: true
@@ -125,7 +125,7 @@ EffectKill:
         - '  &7- drop soup effect'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 436
+      ID: BEETROOT_SOUP
       SLOTS: 25
     HEART:
       ENABLE: true
@@ -137,7 +137,7 @@ EffectKill:
         - '&7full of love!'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 38
+      ID: POPPY
       SLOTS: 21
     REMOVE:
       NAME: '&cRemove'
@@ -146,13 +146,13 @@ EffectKill:
         - '&7remove all effect'
         - ' '
         - '&rLeft click to put this effect'
-      ID: 166
+      ID: BARRIER
       SLOTS: 41
   Messages:
     noEffect: '&cYou do not possess this effect!'
     noPerm: '&cYou do not possess this particle!'
     Remove: '&cYou delete your effect.'
-    Display: '&aYou put the effect %effect%!'
+    Display: '&aYou put the effect %effect%'
     WaveEffect: '&lWaveEffect&a.'
     StarEffect: '&lStarEffect&a.'
     ExplodeEffect: '&lExplodeEffect&a.'
@@ -167,7 +167,7 @@ EffectKill:
     HeartEffect: '&lHeartEffect&a.'
 Item:
   Giveitem: true
-  Joinitem: 399
+  Joinitem: NETHER_STAR
   Placeitem: 5
   Nameitem: '&eEffect-Kill'
   Loreitem: []

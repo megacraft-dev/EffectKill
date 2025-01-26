@@ -24,7 +24,7 @@ public class SoupEffect {
         Bukkit.getScheduler().runTaskLater(Main.getInstance(), () -> {
             for (int i = 0; i < 30; i++) {
                 Item ITEM = player.getWorld().dropItem(player.getLocation(), ItemFactory.create(
-                        Material.getMaterial(Main.getInstance().getConfig().getInt("EffectKill.Gui.SOUP.ID")),
+                        Material.matchMaterial(Main.getInstance().getConfig().getString("EffectKill.Gui.SOUP.ID")),
                         (byte) 0, UUID.randomUUID().toString()));
                 ITEM.setPickupDelay(300);
                 ITEM.setVelocity(new Vector(r.nextDouble() - 0.5D, r.nextDouble() / 2.0D, r.nextDouble() - 0.5D));
@@ -32,10 +32,11 @@ public class SoupEffect {
             }
             Bukkit.getScheduler().runTaskLater(Main.getInstance(), () -> {
                 for (Item i : SoupEffect.items) {
-                    (new ColoredParticle(Particle.REDSTONE, i.getLocation(), 0, 0, 0)).send();
+                    new ColoredParticle(Particle.REDSTONE, i.getLocation(), 0, 0, 0).send();
                     i.remove();
                 }
             }, 50L);
         }, 9L);
     }
 }
+

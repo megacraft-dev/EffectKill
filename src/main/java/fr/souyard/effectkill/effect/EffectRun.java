@@ -12,33 +12,33 @@ public class EffectRun implements Listener {
     private final Main instance = Main.getInstance();
 
     @EventHandler
-    public void onDamage(PlayerDeathEvent event) {
+    public void onDeath(PlayerDeathEvent event) {
         Player player = event.getEntity();
-        Player damager = player.getKiller();
-        if (damager != null) {
-            if (instance.starEffect.contains(damager)) {
-                StarEffect.death(player);
-            } else if (instance.waveEffect.contains(damager)) {
+        Player killer = player.getKiller();
+        if (killer != null) {
+            if (instance.waveEffect.contains(killer)) {
                 WaveEffect.death(player);
-            } else if (instance.sphereEffect.contains(damager)) {
-                SphereEffect.death(player);
-            } else if (instance.satanEffect.contains(damager)) {
-                SatanEffect.death(player);
-            } else if (instance.frostEffect.contains(damager)) {
-                FrostEffect.death(player);
-            } else if (instance.cloudEffect.contains(damager)) {
-                CloudEffect.death(player);
-            } else if (instance.explodeEffect.contains(damager)) {
+            } else if (instance.starEffect.contains(killer)) {
+                StarEffect.death(player);
+            } else if (instance.explodeEffect.contains(killer)) {
                 ExplodeEffect.death(player);
-            } else if (instance.flameringEffect.contains(damager)) {
+            } else if (instance.frostEffect.contains(killer)) {
+                FrostEffect.death(player);
+            } else if (instance.satanEffect.contains(killer)) {
+                SatanEffect.death(player);
+            } else if (instance.sphereEffect.contains(killer)) {
+                SphereEffect.death(player);
+            } else if (instance.cloudEffect.contains(killer)) {
+                CloudEffect.death(player);
+            } else if (instance.flameringEffect.contains(killer)) {
                 FlameRingEffect.death(player);
-            } else if (instance.rainwealthEffect.contains(damager)) {
+            } else if (instance.rainwealthEffect.contains(killer)) {
                 RainwealthEffect.death(player);
-            } else if (instance.fireworkEffect.contains(damager)) {
+            } else if (instance.fireworkEffect.contains(killer)) {
                 FireworkEffect.death(player);
-            } else if (instance.soupEffect.contains(damager)) {
+            } else if (instance.soupEffect.contains(killer)) {
                 SoupEffect.death(player);
-            } else if (instance.heartEffect.contains(damager)) {
+            } else if (instance.heartEffect.contains(killer)) {
                 HeartEffect.death(player);
             }
         }
